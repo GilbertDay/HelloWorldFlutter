@@ -1,7 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:hello_world/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Pertemuan1 extends StatefulWidget {
@@ -57,12 +56,12 @@ class _Pertemuan1State extends State<Pertemuan1> {
                   SharedPreferences pref =
                       await SharedPreferences.getInstance();
                   await pref.setInt("is_login", 0);
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            const MyHomePage(title: 'Home App Gilbert')),
-                  );
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) =>
+                  //           const MyHomePage(title: 'Home App Gilbert')),
+                  // );
                 },
                 child: const Text(
                   'Logout',

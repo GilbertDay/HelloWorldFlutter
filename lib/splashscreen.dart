@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/Pertemuan1.dart';
 import 'dart:async';
+
+import 'package:hello_world/home.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key, required this.title});
@@ -16,10 +17,7 @@ class _SplashscreenState extends State<Splashscreen> {
     var duration = const Duration(seconds: 5);
     return Timer(duration, () {
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  const Pertemuan1(title: 'Demo App Gilbert')));
+          context, MaterialPageRoute(builder: (context) => const MyApp()));
     });
   }
 
